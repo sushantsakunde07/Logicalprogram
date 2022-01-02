@@ -2,20 +2,28 @@ package day6;
 import java.util.*;
 public class logicalprogram {
 public static void main(String args[]){  
-	 int n1=0,n2=1,n3,i,count=0;   
-	 Scanner scan =new Scanner(System.in);
-     System.out.println("Enter a number till Fibonacci Series");
-	 count =scan.nextInt();
-	 scan.close();
-	 System.out.print(n1+" "+n2); 
-	 for(i=2;i<count;++i) 
-	 {  
-	  n3=n1+n2;  
-	  System.out.print(" "+n3);  
-	  n1=n2;  
-	  n2=n3;  
-	 }  
-}}
+	long number, sum=0;  
+	Scanner sc=new Scanner(System.in);         
+	System.out.print("Enter the number: ");  
+	number=sc.nextLong(); 
+	sc.close();
+	int i=1;  
+	while(i <= number/2)  
+	{  
+	if(number % i == 0)  
+	{  
+	sum = sum + i;  
+	}  
+	i++;  
+	}   
+	if(sum==number)  
+	{    
+	System.out.println(number+" is a perfect number.");  
+	} 
+	else   
+	System.out.println(number+" is not a perfect number.");   
+	}  
+	}  
 		
 
 
